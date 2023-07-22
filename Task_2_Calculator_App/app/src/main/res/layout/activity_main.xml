@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/datatview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="30dp"
+        android:layout_marginEnd="12dp"
+        android:textAlignment="textEnd"
+
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/resultview" />
+
+    <TextView
+        android:id="@+id/resultview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text=""
+        android:textSize="30dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        android:textAlignment="textEnd"
+        android:textColor="#959594"
+        app:layout_constraintBottom_toTopOf="@+id/View"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/View"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/linecolor"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        android:layout_marginBottom="6dp"/>
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnroot"
+                style="@style/digitbutton2"
+                android:onClick="specialClick"
+                android:text="√"
+                android:textColor="@color/btnBackground2"
+
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnpi"
+                style="@style/digitbutton2"
+                android:onClick="specialClick"
+                android:textColor="@color/btnBackground2"
+                android:text="π"
+
+                />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnpower"
+                style="@style/digitbutton2"
+                android:layout_width="59dp"
+                android:layout_height="match_parent"
+                android:onClick="specialClick"
+                android:text="x²"
+                android:textColor="@color/btnBackground2" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnnot"
+                style="@style/digitbutton2"
+                android:onClick="specialClick"
+                android:textColor="@color/btnBackground2"
+                android:text="!"
+
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btndropdown"
+                style="@style/digitbutton2"
+                android:layout_width="60dp"
+                android:layout_height="35dp"
+                android:onClick="dropdown"
+                app:icon="@drawable/up"
+                app:iconSize="30dp"
+                app:iconTint="@color/btnBackground2"
+
+
+                />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/hide1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btndegree"
+                style="@style/digitbutton2"
+                android:onClick="specialClick"
+                android:textColor="@color/btnBackground2"
+                android:text="°"
+
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnsin"
+                style="@style/digitbutton2"
+                android:onClick="specialClick"
+                android:layout_width="90dp"
+                android:textSize="15dp"
+                android:textColor="@color/btnBackground2"
+
+                android:text="sin"
+
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btncos"
+                style="@style/digitbutton2"
+                android:onClick="specialClick"
+                android:layout_width="90dp"
+                android:textSize="15dp"
+                android:textColor="@color/btnBackground2"
+
+                android:text="cos"
+
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btntan"
+                style="@style/digitbutton2"
+                android:onClick="specialClick"
+                android:layout_width="90dp"
+                android:textSize="15dp"
+                android:textColor="@color/btnBackground2"
+
+                android:text="tan"
+
+                />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/hide2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:visibility="gone"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/digitbutton2"
+                android:id="@+id/btninverse"
+                android:onClick="specialClick"
+                android:layout_width="90dp"
+
+                android:textSize="20dp"
+
+                android:textColor="@color/btnBackground2"
+                android:text="Inv"
+
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btne"
+                style="@style/digitbutton2"
+                android:onClick="specialClick"
+                android:textColor="@color/btnBackground2"
+
+                android:text="e" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnln"
+                style="@style/digitbutton2"
+                android:onClick="specialClick"
+                android:layout_width="90dp"
+                android:textSize="20dp"
+                android:textColor="@color/btnBackground2"
+
+                android:text="ln"
+
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnlog"
+                style="@style/digitbutton2"
+                android:onClick="specialClick"
+                android:layout_width="90dp"
+                android:textSize="20dp"
+                android:textColor="@color/btnBackground2"
+
+                android:text="log"
+
+                />
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAC"
+                style="@style/digitbutton"
+                android:onClick="onAllClearClick"
+                android:textColor="@color/blue"
+                android:text="AC"
+
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnclear"
+                style="@style/digitbutton"
+                android:onClick="onClearClick"
+                android:textSize="32dp"
+                android:textColor="@color/blue"
+                android:text="C"
+
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnmod"
+                style="@style/digitbutton"
+                android:onClick="onOperatorClick"
+                android:textSize="32dp"
+                android:textColor="@color/blue"
+                android:text="%"
+
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btndivide"
+                style="@style/digitbutton"
+                android:onClick="onOperatorClick"
+                android:textColor="@color/blue"
+                android:text="/"
+                app:iconSize="34dp"
+                app:icon="@drawable/divide"
+                app:iconTint="@color/blue"
+
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn7"
+                style="@style/digitbutton"
+                android:onClick="digits"
+                android:text="7"
+
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn8"
+                style="@style/digitbutton"
+                android:onClick="digits"
+                android:text="8"
+
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn9"
+                style="@style/digitbutton"
+                android:onClick="digits"
+                android:text="9"
+
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnx"
+                style="@style/digitbutton"
+                android:onClick="onOperatorClick"
+                android:text="*"
+                android:textSize="32dp"
+                app:icon="@drawable/xicon"
+                app:iconTint="@color/blue"
+                app:iconSize="32dp"
+                android:textColor="@color/blue"
+                 />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn4"
+                style="@style/digitbutton"
+                android:onClick="digits"
+                android:text="4"
+
+                />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/digitbutton"
+                android:id="@+id/btn5"
+                android:onClick="digits"
+                android:text="5"
+
+                />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/digitbutton"
+                android:onClick="digits"
+                android:id="@+id/btn6"
+                android:text="6"
+
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnminus"
+                style="@style/digitbutton"
+                android:onClick="onOperatorClick"
+                app:iconSize="36dp"
+                app:iconTint="@color/blue"
+                app:icon="@drawable/minus"
+                android:textColor="@color/blue"
+                android:text="-"
+
+                />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn1"
+                style="@style/digitbutton"
+                android:text="1"
+                android:onClick="digits"
+
+                />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn2"
+                style="@style/digitbutton"
+                android:text="2"
+                android:onClick="digits"
+
+                />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn3"
+                style="@style/digitbutton"
+                android:text="3"
+                android:onClick="digits"
+
+                />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnplus"
+                style="@style/digitbutton"
+                android:textSize="40dp"
+                android:text="+"
+                android:textColor="@color/blue"
+                android:onClick="onOperatorClick"
+
+                />
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn0"
+                style="@style/digitbutton"
+                android:text="0"
+                android:onClick="digits"
+
+                />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btndot"
+                style="@style/digitbutton"
+                android:text="."
+                android:textSize="30dp"
+                android:onClick="digits"
+
+                />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnbackspace"
+                style="@style/digitbutton"
+                app:icon="@drawable/baseline_backspace_24"
+                app:iconTint="@color/blue"
+               app:iconSize="35dp"
+
+                android:onClick="onbackClick"
+
+                />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnequalto"
+                style="@style/digitbutton"
+                android:layout_height="71dp"
+                android:layout_width="71dp"
+                android:text="="
+                android:textSize="30dp"
+
+                android:backgroundTint="@color/blue"
+                android:textColor="@color/white"
+                android:onClick="onEqualClick"
+
+                />
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
